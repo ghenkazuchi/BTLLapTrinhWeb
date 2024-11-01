@@ -1,0 +1,309 @@
+﻿@model BTLWEB.Models.TDanhMucSp
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@600;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="../Layoutindex/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="../Layoutindex/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../Layoutindex/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="../Layoutindex/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Spinner Start -->
+    <div id="spinner" class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50  d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <!-- Spinner End -->
+    <!-- Navbar start -->
+    <div class="container-fluid fixed-top">
+        <div class="container topbar bg-primary d-none d-lg-block">
+            <div class="d-flex justify-content-between">
+                <div class="top-info ps-2">
+                    <small class="me-3"><i class="fas fa-map-marker-alt me-2 text-secondary"></i> <a href="#" class="text-white">5 Hai Bà Trưng, Hà Nội</a></small>
+                    <small class="me-3"><i class="fas fa-envelope me-2 text-secondary"></i><a href="#" class="text-white">shop247@gmail.com</a></small>
+                </div>
+                <div class="top-link pe-2">
+                    <a href="#" class="text-white"><small class="text-white mx-2">Uy tín</small>/</a>
+                    <a href="#" class="text-white"><small class="text-white mx-2">Nhanh chóng</small>/</a>
+                    <a href="#" class="text-white"><small class="text-white ms-2">Bảo mật</small></a>
+                </div>
+            </div>
+        </div>
+        <div class="container px-0">
+            <nav class="navbar navbar-light bg-white navbar-expand-xl">
+                <a href="index.html" class="navbar-brand"><h1 class="text-primary display-6">Shop247</h1></a>
+                <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars text-primary"></span>
+                </button>
+                <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
+                    <div class="navbar-nav mx-auto">
+                        <a asp-controller="Home" asp-action="index" class="nav-item nav-link">Home</a>
+                        <a href="shop-detail.html" class="nav-item nav-link active">Shop Detail</a>
+                    </div>
+                    <div class="d-flex m-3 me-0">
+                        @await Component.InvokeAsync("Cart")
+                        <a href="#" class="my-auto">
+                            <i class="fas fa-user fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+    <!-- Modal Search Start -->
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content rounded-0">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Search by keyword</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex align-items-center">
+                    <div class="input-group w-75 mx-auto d-flex">
+                        <input type="search" class="form-control p-3" placeholder="keywords" aria-describedby="search-icon-1">
+                        <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Search End -->
+    <!-- Single Page Header start -->
+    
+    <!-- Single Page Header End -->
+    <!-- Single Product Start -->
+    <div class="container-fluid py-5 mt-5">
+        <div class="container py-5">
+            <div class="hero-header">
+                <div class="row g-4 mb-5">
+                <div class="col-lg-8 col-xl-9">
+                    <div class="row g-4">
+                        <div class="col-lg-6">
+                            <div class="border rounded">
+                                <a href="#">
+                                    <img src="@Url.Content("../Images/"+Model.AnhDaiDien)" class="img-fluid rounded" alt="Image">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <h4 class="fw-bold mb-3">@Model.TenSp</h4>
+                            <h5 class="fw-bold mb-3">Hãng sản xuất: @Model.MaHangSxNavigation?.HangSx</h5>
+                            <h5 class="fw-bold mb-3">Phong cách: @Model.MaDtNavigation?.TenLoai</h5>
+                            <h5 class="fw-bold mb-3">Thời gian bảo hành: @Model.ThoiGianBaoHanh năm</h5>
+                            <h5 class="fw-bold mb-3">Giá: @Model.GiaLonNhat.Value.ToString("#,##0") VNĐ</h5>
+                           
+                            <div class="d-flex mb-4">
+                                <i class="fa fa-star text-secondary"></i>
+                                <i class="fa fa-star text-secondary"></i>
+                                <i class="fa fa-star text-secondary"></i>
+                                <i class="fa fa-star text-secondary"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                           
+                            <form asp-action="AddToCart" asp-controller="Cart" asp-route-masp="@Model.MaSp">
+                                <div class="input-group quantity mb-5" style="width: 100px;">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-sm btn-minus rounded-circle bg-light border" type="button">
+                                        <i class="fa fa-minus"></i>
+                                    </button>
+                                </div>
+                                <input type="text" class="form-control form-control-sm text-center border-0" value="1" name="soluong">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-sm btn-plus rounded-circle bg-light border" type="button">
+                                        <i class="fa fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                                <button  class="btn border border-secondary rounded-pill px-4 py-2 mb-4 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Thêm vào giỏ hàng</button>
+                            </form>
+                        </div>
+                        <div class="col-lg-12">
+                            <nav>
+                                <div class="nav nav-tabs mb-3">
+                                    <button class="nav-link active border-white border-bottom-0" type="button" role="tab"
+                                            id="nav-about-tab" data-bs-toggle="tab" data-bs-target="#nav-about"
+                                            aria-controls="nav-about" aria-selected="true">
+                                        Chi tiết sản phẩm
+                                    </button>
+                                    
+                                </div>
+                            </nav>
+                            <div class="tab-content mb-5">
+                                <div class="tab-pane active" id="nav-about" role="tabpanel" aria-labelledby="nav-about-tab">
+                                    <p>
+                                        @Model.GioiThieuSp
+                                    </p>
+                                    <p>
+                                      
+                                    </p>
+                                    <div class="px-2">
+                                        <div class="row g-4">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane" id="nav-mission" role="tabpanel" aria-labelledby="nav-mission-tab">
+                                    <div class="d-flex">
+                                        <img src="../Layoutindex/img/avatar.jpg" class="img-fluid rounded-circle p-3" style="width: 100px; height: 100px;" alt="">
+                                        <div class="">
+                                            <p class="mb-2" style="font-size: 14px;">April 12, 2024</p>
+                                            <div class="d-flex justify-content-between">
+                                                <h5>Jason Smith</h5>
+                                                <div class="d-flex mb-3">
+                                                    <i class="fa fa-star text-secondary"></i>
+                                                    <i class="fa fa-star text-secondary"></i>
+                                                    <i class="fa fa-star text-secondary"></i>
+                                                    <i class="fa fa-star text-secondary"></i>
+                                                    <i class="fa fa-star"></i>
+                                                </div>
+                                            </div>
+                                            <p>
+                                                
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex">
+                                        <img src="../Layoutindex/img/avatar.jpg" class="img-fluid rounded-circle p-3" style="width: 100px; height: 100px;" alt="">
+                                        <div class="">
+                                            <p class="mb-2" style="font-size: 14px;">April 12, 2024</p>
+                                            <div class="d-flex justify-content-between">
+                                                <h5>Sam Peters</h5>
+                                                <div class="d-flex mb-3">
+                                                    <i class="fa fa-star text-secondary"></i>
+                                                    <i class="fa fa-star text-secondary"></i>
+                                                    <i class="fa fa-star text-secondary"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                </div>
+                                            </div>
+                                            <p class="text-dark">
+                                                
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane" id="nav-vision" role="tabpanel">
+                                    <p class="text-dark">
+                                        
+                                    </p>
+                                    <p class="mb-0">
+                                        
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-lg-4 col-xl-3">
+                   
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- Single Product End -->
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5">
+        <div class="container py-5">
+            <div class="pb-4 mb-4" style="border-bottom: 1px solid rgba(226, 175, 24, 0.5) ;">
+                <div class="row g-4">
+                    <div class="col-lg-3">
+                        <a href="#">
+                            <h1 class="text-primary mb-0">Shop247</h1>
+                            
+                        </a>
+                    </div>
+                    <div class="col-lg-6">
+                        
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="d-flex justify-content-end pt-3">
+                            <a class="btn  btn-outline-secondary me-2 btn-md-square rounded-circle" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-secondary me-2 btn-md-square rounded-circle" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-secondary me-2 btn-md-square rounded-circle" href=""><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-secondary btn-md-square rounded-circle" href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-item">
+                        <h4 class="text-light mb-3">thông tin </h4>
+                        <p class="mb-4">
+                            cửa hàng chúng tôi cung cấp sản phẩm chính hãng với giá rẻ nhất thị trường 
+                            cùng với phương thức giao hàng nhanh chóng.
+                        </p>
+                       
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="d-flex flex-column text-start footer-item">
+                        <h4 class="text-light mb-3">Phương thức mua hàng</h4>
+                        <a class="btn-link" href="">mua tại cửa hàng</a>
+                        <a class="btn-link" href="">mua online</a>
+                        <a class="btn-link" href="">Shoppe</a>
+                        <a class="btn-link" href="">Lazada</a>
+                        
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-item">
+                        <h4 class="text-light mb-3">Thông tin liên hệ</h4>
+                        <p>Address: 5 đường Hai Bà Trưng Hà Nội</p>
+                        <p>Email: shop247@gmail.com</p>
+                        <p>Phone: 0350 123 787</p>
+                        <p>Thanh Toán</p>
+                        <img src="../Layoutindex/img/payment.png" class="img-fluid" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+    <!-- Copyright Start -->
+   
+    <!-- Copyright End -->
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary border-3 border-primary rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../Layoutindex/lib/easing/easing.min.js"></script>
+    <script src="../Layoutindex/lib/waypoints/waypoints.min.js"></script>
+    <script src="../Layoutindex/lib/lightbox/js/lightbox.min.js"></script>
+    <script src="../Layoutindex/lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="../Layoutindex/js/main.js"></script>
+</body>
+
+</html>

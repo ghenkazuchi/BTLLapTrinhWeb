@@ -1,0 +1,201 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\ASP.net\\BTLWEB\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D65BC982-4519-4A2D-8515-8B824ADD7A3B}|BTLWEB.csproj|d:\\asp.net\\btlweb\\areas\\admin\\controllers\\homeadmincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D65BC982-4519-4A2D-8515-8B824ADD7A3B}|BTLWEB.csproj|solutionrelative:areas\\admin\\controllers\\homeadmincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D65BC982-4519-4A2D-8515-8B824ADD7A3B}|BTLWEB.csproj|d:\\asp.net\\btlweb\\views\\shared\\layoutindex.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D65BC982-4519-4A2D-8515-8B824ADD7A3B}|BTLWEB.csproj|solutionrelative:views\\shared\\layoutindex.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D65BC982-4519-4A2D-8515-8B824ADD7A3B}|BTLWEB.csproj|d:\\asp.net\\btlweb\\views\\cart\\checkout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D65BC982-4519-4A2D-8515-8B824ADD7A3B}|BTLWEB.csproj|solutionrelative:views\\cart\\checkout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D65BC982-4519-4A2D-8515-8B824ADD7A3B}|BTLWEB.csproj|d:\\asp.net\\btlweb\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D65BC982-4519-4A2D-8515-8B824ADD7A3B}|BTLWEB.csproj|solutionrelative:controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D65BC982-4519-4A2D-8515-8B824ADD7A3B}|BTLWEB.csproj|d:\\asp.net\\btlweb\\areas\\admin\\views\\homeadmin\\editnhanvien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D65BC982-4519-4A2D-8515-8B824ADD7A3B}|BTLWEB.csproj|solutionrelative:areas\\admin\\views\\homeadmin\\editnhanvien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D65BC982-4519-4A2D-8515-8B824ADD7A3B}|BTLWEB.csproj|d:\\asp.net\\btlweb\\areas\\admin\\views\\homeadmin\\detailsnhanvien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D65BC982-4519-4A2D-8515-8B824ADD7A3B}|BTLWEB.csproj|solutionrelative:areas\\admin\\views\\homeadmin\\detailsnhanvien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D65BC982-4519-4A2D-8515-8B824ADD7A3B}|BTLWEB.csproj|d:\\asp.net\\btlweb\\views\\login\\dangnhap.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D65BC982-4519-4A2D-8515-8B824ADD7A3B}|BTLWEB.csproj|solutionrelative:views\\login\\dangnhap.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D65BC982-4519-4A2D-8515-8B824ADD7A3B}|BTLWEB.csproj|d:\\asp.net\\btlweb\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D65BC982-4519-4A2D-8515-8B824ADD7A3B}|BTLWEB.csproj|solutionrelative:controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D65BC982-4519-4A2D-8515-8B824ADD7A3B}|BTLWEB.csproj|d:\\asp.net\\btlweb\\areas\\admin\\views\\homeadmin\\danhsachkhachhang.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D65BC982-4519-4A2D-8515-8B824ADD7A3B}|BTLWEB.csproj|solutionrelative:areas\\admin\\views\\homeadmin\\danhsachkhachhang.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D65BC982-4519-4A2D-8515-8B824ADD7A3B}|BTLWEB.csproj|d:\\asp.net\\btlweb\\models\\tnhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D65BC982-4519-4A2D-8515-8B824ADD7A3B}|BTLWEB.csproj|solutionrelative:models\\tnhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D65BC982-4519-4A2D-8515-8B824ADD7A3B}|BTLWEB.csproj|d:\\asp.net\\btlweb\\areas\\admin\\views\\homeadmin\\danhsachnhanvien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D65BC982-4519-4A2D-8515-8B824ADD7A3B}|BTLWEB.csproj|solutionrelative:areas\\admin\\views\\homeadmin\\danhsachnhanvien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 11,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CheckOut.cshtml",
+              "DocumentMoniker": "D:\\ASP.net\\BTLWEB\\Views\\Cart\\CheckOut.cshtml",
+              "RelativeDocumentMoniker": "Views\\Cart\\CheckOut.cshtml",
+              "ToolTip": "D:\\ASP.net\\BTLWEB\\Views\\Cart\\CheckOut.cshtml",
+              "RelativeToolTip": "Views\\Cart\\CheckOut.cshtml",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAAAFQAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-31T15:50:10.708Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "D:\\ASP.net\\BTLWEB\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "Controllers\\LoginController.cs",
+              "ToolTip": "D:\\ASP.net\\BTLWEB\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "Controllers\\LoginController.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-31T15:04:51.336Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LayoutIndex.cshtml",
+              "DocumentMoniker": "D:\\ASP.net\\BTLWEB\\Views\\Shared\\LayoutIndex.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\LayoutIndex.cshtml",
+              "ToolTip": "D:\\ASP.net\\BTLWEB\\Views\\Shared\\LayoutIndex.cshtml",
+              "RelativeToolTip": "Views\\Shared\\LayoutIndex.cshtml",
+              "ViewState": "AgIAADkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-31T09:01:58.559Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CartController.cs",
+              "DocumentMoniker": "D:\\ASP.net\\BTLWEB\\Controllers\\CartController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CartController.cs",
+              "ToolTip": "D:\\ASP.net\\BTLWEB\\Controllers\\CartController.cs",
+              "RelativeToolTip": "Controllers\\CartController.cs",
+              "ViewState": "AgIAAG0AAAAAAAAAAAAAAHQAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T07:06:24.319Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DangNhap.cshtml",
+              "DocumentMoniker": "D:\\ASP.net\\BTLWEB\\Views\\Login\\DangNhap.cshtml",
+              "RelativeDocumentMoniker": "Views\\Login\\DangNhap.cshtml",
+              "ToolTip": "D:\\ASP.net\\BTLWEB\\Views\\Login\\DangNhap.cshtml",
+              "RelativeToolTip": "Views\\Login\\DangNhap.cshtml",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-29T07:04:21.948Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DanhSachKhachHang.cshtml",
+              "DocumentMoniker": "D:\\ASP.net\\BTLWEB\\Areas\\Admin\\Views\\HomeAdmin\\DanhSachKhachHang.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\HomeAdmin\\DanhSachKhachHang.cshtml",
+              "ToolTip": "D:\\ASP.net\\BTLWEB\\Areas\\Admin\\Views\\HomeAdmin\\DanhSachKhachHang.cshtml",
+              "RelativeToolTip": "Areas\\Admin\\Views\\HomeAdmin\\DanhSachKhachHang.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACAAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-29T07:03:35.448Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "TNhanVien.cs",
+              "DocumentMoniker": "D:\\ASP.net\\BTLWEB\\Models\\TNhanVien.cs",
+              "RelativeDocumentMoniker": "Models\\TNhanVien.cs",
+              "ToolTip": "D:\\ASP.net\\BTLWEB\\Models\\TNhanVien.cs",
+              "RelativeToolTip": "Models\\TNhanVien.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAA7wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T06:55:23.555Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DetailsNhanVien.cshtml",
+              "DocumentMoniker": "D:\\ASP.net\\BTLWEB\\Areas\\Admin\\Views\\HomeAdmin\\DetailsNhanVien.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\HomeAdmin\\DetailsNhanVien.cshtml",
+              "ToolTip": "D:\\ASP.net\\BTLWEB\\Areas\\Admin\\Views\\HomeAdmin\\DetailsNhanVien.cshtml",
+              "RelativeToolTip": "Areas\\Admin\\Views\\HomeAdmin\\DetailsNhanVien.cshtml",
+              "ViewState": "AgIAAF4AAAAAAAAAAAAIwGwAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-29T06:30:08.587Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EditNhanVien.cshtml",
+              "DocumentMoniker": "D:\\ASP.net\\BTLWEB\\Areas\\Admin\\Views\\HomeAdmin\\EditNhanVien.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\HomeAdmin\\EditNhanVien.cshtml",
+              "ToolTip": "D:\\ASP.net\\BTLWEB\\Areas\\Admin\\Views\\HomeAdmin\\EditNhanVien.cshtml",
+              "RelativeToolTip": "Areas\\Admin\\Views\\HomeAdmin\\EditNhanVien.cshtml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAIwC4AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-29T06:27:26.798Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "DanhSachNhanVien.cshtml",
+              "DocumentMoniker": "D:\\ASP.net\\BTLWEB\\Areas\\Admin\\Views\\HomeAdmin\\DanhSachNhanVien.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\HomeAdmin\\DanhSachNhanVien.cshtml",
+              "ToolTip": "D:\\ASP.net\\BTLWEB\\Areas\\Admin\\Views\\HomeAdmin\\DanhSachNhanVien.cshtml",
+              "RelativeToolTip": "Areas\\Admin\\Views\\HomeAdmin\\DanhSachNhanVien.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-29T06:25:32.776Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HomeAdminController.cs",
+              "DocumentMoniker": "D:\\ASP.net\\BTLWEB\\Areas\\Admin\\Controllers\\HomeAdminController.cs",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\HomeAdminController.cs",
+              "ToolTip": "D:\\ASP.net\\BTLWEB\\Areas\\Admin\\Controllers\\HomeAdminController.cs",
+              "RelativeToolTip": "Areas\\Admin\\Controllers\\HomeAdminController.cs",
+              "ViewState": "AgIAAEMBAAAAAAAAAAAAAEwBAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T06:22:52.588Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

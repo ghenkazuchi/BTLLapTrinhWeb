@@ -1,0 +1,54 @@
+﻿@model BTLWEB.Models.TNhanVien
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Edit Nhan Vien";
+    Layout = "~/Areas/Admin/Views/Shared/Layoutadmin.cshtml";
+}
+
+<h1>Edit Nhan Vien</h1>
+
+<form asp-area="Admin" asp-controller="HomeAdmin" asp-action="EditNhanVien" method="post">
+    <input type="hidden" asp-for="MaNhanVien" />
+    <input type="hidden" asp-for="Username" /> <!-- Trường ẩn để giữ Username -->
+
+    <div class="form-group">
+        <label asp-for="TenNhanVien"></label>
+        <input asp-for="TenNhanVien" class="form-control" placeholder="Tên nhân viên" />
+        <span asp-validation-for="TenNhanVien" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="NgaySinh"></label>
+        <input asp-for="NgaySinh" class="form-control" type="date" />
+        <span asp-validation-for="NgaySinh" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="SoDienThoai1"></label>
+        <input asp-for="SoDienThoai1" class="form-control" />
+        <span asp-validation-for="SoDienThoai1" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="DiaChi"></label>
+        <input asp-for="DiaChi" class="form-control" />
+        <span asp-validation-for="DiaChi" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ChucVu"></label>
+        <input asp-for="ChucVu" class="form-control" />
+        <span asp-validation-for="ChucVu" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="TinhTrang"></label>
+        <input asp-for="TinhTrang" class="form-control" />
+        <span asp-validation-for="TinhTrang" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Save</button>
+        <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+    </div>
+</form>

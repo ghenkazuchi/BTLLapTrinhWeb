@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/LayoutIndex.cshtml";
+}
+@using X.PagedList.Mvc.Core;
+@model X.PagedList.IPagedList<TDanhMucSp>
+@foreach (var item in Model)
+{
+    <div class="col-md-6 col-lg-6 col-xl-4">
+        <div class="rounded position-relative fruite-item">
+            <div class="fruite-img">
+                <img src="@Url.Content("../Images/"+item.AnhDaiDien)" class="img-fluid w-100 rounded-top" alt="">
+            </div>
+            <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">@item.MaLoaiNavigation?.Loai</div>
+            <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                <h4><a asp-controller="Home" asp-action="ChiTietSanPham" asp-route-masp="@item.MaSp">@item.TenSp</a></h4>
+                <p>Hãng sản xuất: @item.MaHangSxNavigation?.HangSx</p>
+                <p>Phong cách: @item.MaDtNavigation?.TenLoai</p>
+                <p>Thời gian bảo hành: @item.ThoiGianBaoHanh năm</p>
+                <div class="d-flex justify-content-between flex-lg-wrap">
+                    <p class="text-dark fs-5 fw-bold mb-0">@item.GiaLonNhat.Value.ToString("#,##0") VNĐ</p>
+                    <a asp-action="AddToCart" asp-controller="Cart" asp-route-masp="@item.MaSp" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+}
+<div class="pagination-container" style="
+    display: inline-block;">
+    @Html.PagedListPager(Model, page => Url.Action("TimKiemSp", new { page = page, tensp= ViewBag.tensp}))
+</div>
+
+
+
+
+
+
+
+

@@ -1,0 +1,47 @@
+﻿@model BTLWEB.Models.TKhachHang
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Edit Customer";
+    Layout = "~/Areas/Admin/Views/Shared/Layoutadmin.cshtml";
+}
+
+<h1>Edit Customer</h1>
+
+<form asp-area="Admin" asp-controller="HomeAdmin" asp-action="EditKhachHang" method="post">
+
+    <input type="hidden" asp-for="MaKhanhHang" />
+    <input type="hidden" asp-for="Username" />
+    <div class="form-group">
+        <label asp-for="TenKhachHang"></label>
+        <input asp-for="TenKhachHang" class="form-control" />
+        <span asp-validation-for="TenKhachHang" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="SoDienThoai"></label>
+        <input asp-for="SoDienThoai" class="form-control" />
+        <span asp-validation-for="SoDienThoai" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="DiaChi"></label>
+        <input asp-for="DiaChi" class="form-control" />
+        <span asp-validation-for="DiaChi" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="NgayDat"></label>
+        <input asp-for="NgayDat" class="form-control" />
+        <span asp-validation-for="NgayDat" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="GhiChu"></label>
+        <input asp-for="GhiChu" class="form-control" />
+        <span asp-validation-for="GhiChu" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Save</button>
+        <a asp-action="DanhSachKhachHang" class="btn btn-secondary">Cancel</a>
+    </div>
+</form>

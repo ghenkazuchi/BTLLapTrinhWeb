@@ -1,0 +1,162 @@
+﻿@using BTLWEB.Models;
+@using X.PagedList.Mvc.Core;
+@model X.PagedList.IPagedList<TDanhMucSp>
+@{
+    ViewData["Title"] = "DanhMucSanPham";
+    Layout = "~/Areas/Admin/Views/Shared/Layoutadmin.cshtml";
+}
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<style>
+    /* CSS cho pagination */
+    .pagination {
+        display: flex;
+        justify-content: center;
+        padding: 10px 0;
+        list-style-type: none;
+        margin-top: 10px;
+        padding: 0;
+    }
+
+        .pagination a {
+            color: #007bff;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 10px 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            transition: background-color 0.3s ease;
+        }
+
+            .pagination a:hover {
+                background-color: #007bff;
+                color: white;
+            }
+
+        .pagination .active a {
+            background-color: #007bff;
+            color: white;
+            border-color: #007bff;
+            cursor: default;
+        }
+
+        .pagination .disabled a {
+            color: #ddd;
+            cursor: not-allowed;
+        }
+
+        .pagination .first a,
+        .pagination .last a {
+            font-weight: bold;
+        }
+
+        .pagination .previous a,
+        .pagination .next a {
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+    .pagination-sm a {
+        padding: 6px 12px;
+        font-size: 0.875rem;
+    }
+
+    .pagination-lg a {
+        padding: 10px 20px;
+        font-size: 1.25rem;
+    }
+
+    .search-form {
+        display: flex;
+        align-items: center;
+    }
+
+    .search-input {
+        width: 250px;
+        margin-right: 10px;
+    }
+
+    .search-button {
+        padding: 10px 15px;
+        margin-bottom: 24px;
+        height: 45px;
+    }
+
+    .form-control,
+    .btn {
+        height: 45px;
+        line-height: 1.5;
+    }
+
+</style>
+
+<h2>Danh mục các sản phẩm</h2>
+
+<!-- Container for Create New and Search Form -->
+<div class="d-flex justify-content-between mb-3">
+    <p>
+        <a asp-action="ThemSanPham" class="btn btn-primary">Create New</a>
+    </p>
+    <!-- Form tìm kiếm -->
+    <form asp-controller="HomeAdmin" asp-action="DanhMucSanPham" method="get" class="search-form">
+        <div class="form-group">
+            <input type="text" name="searchString" value="@ViewBag.CurrentFilter" class="form-control search-input" placeholder="Nhập tên sản phẩm" />
+        </div>
+        <div class="form-group">
+            <input type="number" name="minPrice" value="@ViewBag.MinPrice" class="form-control search-input" placeholder="Giá tối thiểu" />
+        </div>
+        <div class="form-group">
+            <input type="number" name="maxPrice" value="@ViewBag.MaxPrice" class="form-control search-input" placeholder="Giá tối đa" />
+        </div>
+        <div class="form-group">
+            <select name="productCode" class="form-control search-input" style="height: calc(2.5rem + 2px);">
+                <option value="">Chọn mã sản phẩm</option>
+                @foreach (var code in ViewBag.ProductCodes)
+                {
+                    <option value="@code">@code</option>
+                }
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary search-button">Tìm kiếm</button>
+    </form>
+</div>
+
+<p>@TempData["Message"]</p>
+
+<table class="table">
+    <thead>
+        <tr class="table-warning">
+            <th>Tên sản phẩm</th>
+            <th>Thời gian bảo hành(năm)</th>
+            <th>Giá nhập</th>
+            <th>Giá bán</th>
+            <th>Chỉnh sửa</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr class="table-success">
+                <td>@Html.DisplayFor(modelItem => item.TenSp)</td>
+                <td>@Html.DisplayFor(modelItem => item.ThoiGianBaoHanh)</td>
+                <td>@Html.DisplayFor(modelItem => item.GiaNhoNhat)</td>
+                <td>@Html.DisplayFor(modelItem => item.GiaLonNhat)</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.MaSp">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.MaSp">Details</a> |
+                    <a asp-action="XoaSanPham" asp-route-maSanPham="@item.MaSp">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div class="pagination">
+    @Html.PagedListPager(
+            Model,
+            page => Url.Action("DanhMucSanPham", new { page = page, searchString = ViewBag.CurrentFilter, minPrice = ViewBag.MinPrice, maxPrice = ViewBag.MaxPrice }),
+            new PagedListRenderOptions() { }
+            )
+</div>
+
+

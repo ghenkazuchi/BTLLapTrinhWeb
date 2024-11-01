@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Đặt hàng thành công";
+}
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+@TempData["dt"]
+<div class="container">
+    <div class="alert alert-success mt-5">
+        <h1 class="display-4">Đặt hàng thành công!</h1>
+        @TempData["dt"]
+        <p class="lead">Cảm ơn bạn đã chọn sản phẩm của chúng tôi. Đơn hàng của bạn đã được thực hiện thành công.</p>
+        <hr class="my-4">
+        <p>Nếu có thắc mắc, vui lòng liên hệ với chúng tôi qua số điện thoại 0978933829 hoặc shop247@gmail.com để được hỗ trợ.</p>
+        <a class="btn btn-primary btn-lg" href="@Url.Action("Index", "Home")" >Trở về trang chủ</a>
+    </div>
+</div>
+

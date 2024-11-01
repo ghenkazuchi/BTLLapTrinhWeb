@@ -1,0 +1,46 @@
+﻿@model IEnumerable<BTLWEB.Models.THoaDonBan>
+
+@{
+    ViewData["Title"] = "Danh Sách Hóa Đơn";
+    Layout = "~/Areas/Admin/Views/Shared/Layoutadmin.cshtml";
+}
+
+<h1>Danh Sách Hóa Đơn</h1>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.NgayHoaDon)</th>
+            <th>@Html.DisplayNameFor(model => model.TongTienHd)</th>
+           
+            <th>@Html.DisplayNameFor(model => model.PhuongThucThanhToan)</th>
+            
+            
+            <th>Tên Khách Hàng</th>
+         
+            <th>Thao Tác</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.NgayHoaDon?.ToString("dd/MM/yyyy")</td> <!-- Định dạng ngày tháng -->
+                <td>@item.TongTienHd?.ToString("#,##0")</td> <!-- Định dạng số tiền -->
+               
+                <td>
+                   @item.PhuongThucThanhToan
+                </td>
+               
+               
+                <td>@item.MaKhachHangNavigation?.TenKhachHang</td> <!-- Hiển thị tên khách hàng -->
+               
+                <td>
+                    <a href="@Url.Action("ChiTietHoaDon", "HomeAdmin", new { area = "admin", id = @item.MaHoaDon })" class="btn btn-info btn-sm">Xem</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+

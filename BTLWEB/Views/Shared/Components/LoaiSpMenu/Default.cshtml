@@ -1,0 +1,12 @@
+﻿@model IEnumerable<TLoaiSp>
+<ul class="list-unstyled fruite-categorie">
+    @foreach(var item in Model)
+    {
+        <li>
+            <div class="d-flex justify-content-between fruite-name">
+                <a asp-controller="Home" asp-action="SanPhamTheoLoai" asp-route-maloai="@item.MaLoai">@item.Loai</a>
+            </div>
+        </li>
+
+    }
+</ul>

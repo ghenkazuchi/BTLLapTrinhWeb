@@ -1,0 +1,52 @@
+﻿@model IEnumerable<BTLWEB.Models.TNhanVien>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    ViewData["Title"] = "Danh Sách Nhân Viên";
+    Layout = "~/Areas/Admin/Views/Shared/Layoutadmin.cshtml";
+}
+
+<h1>Danh Sách Nhân Viên</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.TenNhanVien)</th>
+            <th>@Html.DisplayNameFor(model => model.NgaySinh)</th>
+            <th>@Html.DisplayNameFor(model => model.SoDienThoai1)</th>
+            <th>@Html.DisplayNameFor(model => model.DiaChi)</th>
+            <th>@Html.DisplayNameFor(model => model.ChucVu)</th>
+            <th>@Html.DisplayNameFor(model=>model.TinhTrang)</th>
+            <th>Chỉnh Sửa</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.TenNhanVien)</td>
+                <td>@Html.DisplayFor(modelItem => item.NgaySinh)</td>
+                <td>@Html.DisplayFor(modelItem => item.SoDienThoai1)</td>
+                <td>@Html.DisplayFor(modelItem => item.DiaChi)</td>
+                <td>@Html.DisplayFor(modelItem => item.ChucVu)</td>
+                <td>@Html.DisplayFor(modelItem => item.TinhTrang)</td>
+                <td>
+                    <a asp-action="EditNhanVien" asp-route-id="@item.MaNhanVien" class="btn btn-primary">Edit</a> |
+                    <a asp-action="DetailsNhanVien" asp-route-id="@item.MaNhanVien" class="btn btn-primary">Details</a> |
+                    <form asp-action="DeleteNhanVien" asp-route-id="@item.MaNhanVien" method="post" style="display:inline;">
+                        <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this employee?');">Delete</button>
+                        @Html.AntiForgeryToken()
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-info">
+        @TempData["Message"]
+    </div>
+}
+

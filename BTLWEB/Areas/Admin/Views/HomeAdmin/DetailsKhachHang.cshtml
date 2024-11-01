@@ -1,0 +1,117 @@
+﻿@model BTLWEB.Models.TKhachHang
+@{
+    ViewData["Title"] = "Chi tiết khách hàng";
+    Layout = "~/Areas/Admin/Views/Shared/Layoutadmin.cshtml";
+}
+
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .customer-detail {
+        max-width: 1300px;
+        margin: 0 auto;
+        padding: 20px;
+        padding-left: 40px;
+        padding-right: 40px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+        .customer-detail h2 {
+            margin-bottom: 30px;
+            font-size: 32px;
+            font-weight: bold;
+            text-align: center;
+            color: #333;
+        }
+
+        .customer-detail .form-group {
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+            .customer-detail .form-group label {
+                font-weight: 600;
+                color: #555;
+                margin-right: 20px;
+                flex-basis: 30%;
+                text-align: left;
+                font-size: 18px;
+            }
+
+            .customer-detail .form-group span {
+                flex-basis: 60%;
+                font-size: 18px;
+                color: #333;
+                background-color: #f0f0f0;
+                padding: 10px;
+                border-radius: 5px;
+                cursor: default;
+                pointer-events: none;
+            }
+
+            .customer-detail .form-group img {
+                max-width: 100%;
+                border-radius: 5px;
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+            }
+
+    .btn-back {
+        display: block;
+        margin: 20px auto;
+        padding: 10px 20px;
+        background-color: #6c757d;
+        color: white;
+        text-align: center;
+        border-radius: 5px;
+        text-decoration: none;
+        width: 200px;
+        font-size: 18px;
+    }
+
+        .btn-back:hover {
+            background-color: #5a6268;
+            color: white;
+        }
+</style>
+
+<div class="customer-detail">
+    <h2>Chi tiết khách hàng</h2>
+
+    <div class="form-group">
+        <label>Họ và tên:</label>
+        <span>@Model.TenKhachHang</span>
+    </div>
+    <div class="form-group">
+        <label>Tên đăng nhập:</label>
+        <span>@Model.Username</span>
+    </div>
+    <div class="form-group">
+        <label>Số điện thoại:</label>
+        <span>@Model.SoDienThoai</span>
+    </div>
+    <div class="form-group">
+        <label>Địa chỉ:</label>
+        <span>@Model.DiaChi</span>
+    </div>
+    <div class="form-group">
+        <label>Ngày đặt hàng:</label>
+        <span>@Model.NgayDat</span>
+    </div>
+   
+    <div class="form-group">
+        <label>Ghi chú:</label>
+        <span>@Model.GhiChu</span>
+    </div>
+
+    <!-- Update this part to match the Cancel button logic in the Edit view -->
+    <div class="form-group">
+        <a href="@Url.Action("DanhSachKhachHang","HomeAdmin",new {area="admin"})">quay lại danh sách</a>
+    </div>
+</div>
+
